@@ -52,7 +52,7 @@ Table:
 
 ------------------------------------------------------------------------
 
-## 9.17.2026 dibing into code:
+## 9.17.2026 diving into code:
 
 ```{r}
 cd
@@ -66,3 +66,7 @@ zcat AA_F0_Rep1_2_clean.fq.gz \| head -n 100\
 -this is printing the data of the "AA_F0_Rep1_2_clean.fq.gz" file and \| head -n 100 is asking to print the first 100 lines
 
 \| wc -l // the word could on the lines
+
+# 
+
+## 9.22.2026
