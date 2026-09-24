@@ -2,7 +2,7 @@
 ##Using DESeq2
 
 ## Set your working directory
-setwd("~/projects/eco_genomics_2026/transcriptomics")
+setwd("~/projects/eco_genomics_2026/transcriptomics/mydata")
 
 ## Import the libraries that we're likely to need in this session
 
@@ -23,7 +23,7 @@ library("vsn")
 ####################################################
 
 
-# Import the counts matrix
+# Import the counts matrix, This asks the program to read the matrix, and give it a hearer and that the row names are from row
 countsTable <- read.table("mydata/salmon.isoform.counts.matrix.filteredAssembly", header=TRUE, row.names=1)
 head(countsTable)
 dim(countsTable)
@@ -68,7 +68,7 @@ hist(apply(countsTableRound,1,mean),xlim=c(0,1000), ylim=c(0,43000),breaks=10000
 
 dds <- DESeqDataSetFromMatrix(countData = countsTableRound, colData=conds, 
                               design= ~ generation + treatment)
-
+ ### model design is to determine how well generation determines treatment
 dim(dds)
 
 # Filter out genes with too few reads - remove all genes with counts < 15 in more than 75% of samples, so ~28)
