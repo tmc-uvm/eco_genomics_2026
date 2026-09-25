@@ -69,4 +69,69 @@ zcat AA_F0_Rep1_2_clean.fq.gz \| head -n 100\
 
 # 
 
-## 9.22.2026
+## 9.22.2026, 9.24.2026
+
+#### **BASH**
+
+pwd // print working directory
+
+cd // change directory
+
+.. // move back in directory
+
+. // from here, “this spot”
+
+ls // list short “what’s here?”
+
+ll // list long
+
+zcat // print out file
+
+head // just the top
+
+history // all recent commands
+
+cp // copy
+
+rm // remove (carful!)
+
+[arrow up] // prior command
+
+[tab] // autofill file/confirmation of existence
+
+\~ // home directory shortcut, jumps file pathway
+
+---
+
+/users/t/c/tmclark/projects/eco_genomics_2026/transcriptomics/ →
+
+/mydata
+
+/myresults
+
+/myscripts
+
+---
+
+/gpfs1/cl/biol3990/ →
+
+/transcriptomics/CountsMatrix
+
+/ecogen/SW/setup.sh
+
+----------------------------------------------
+
+#### Git interaction (manually thru terminal)
+
+```{r}
+#checks the status of git of current working directory
+git status
+#adds "current ".gitignore" to staging, then commits it with the message in quotations, then pushes it, you'll be prompted for user and password
+git add .gitignore
+git commit -m "Ignore results directory"
+git push
+#problem diagnosing commands
+git status
+git branch
+git remote -v
+```
